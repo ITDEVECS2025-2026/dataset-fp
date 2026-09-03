@@ -24,7 +24,7 @@ Dataset berisi data mentah hasil pembacaan sensor tanah, dikumpulkan dari perang
 | `Humidity_pct` | Kelembapan (%) |
 | `Light_lux` | Intensitas cahaya (lux) |
 
-Dataset terdiri dari 3000 baris data dan 9 parameter sensor lingkungan (di luar `Datetime` dan `DeviceId`), sesuai dengan ketentuan studi kasus (2000–4000 baris). Beberapa kolom memiliki nilai kosong (*missing values*), sehingga dataset perlu dianalisis dan dibersihkan terlebih dahulu sebelum digunakan untuk pemodelan.
+Dataset terdiri dari 3000 baris data dan 9 parameter sensor lingkungan (di luar `Datetime` dan `DeviceId`), sesuai dengan ketentuan studi kasus. Beberapa kolom memiliki nilai kosong (*missing values*), sehingga dataset perlu dianalisis dan dibersihkan terlebih dahulu sebelum digunakan untuk pemodelan.
 
 ## Studi Kasus
 
@@ -58,19 +58,19 @@ Agar model dapat muat pada perangkat keras yang sangat terbatas, peserta wajib m
 
 Menggunakan `dataset.csv`, peserta diharapkan mengerjakan alur berikut secara mandiri di **Google Colab**:
 
-1. **Exploratory Data Analysis (EDA)** — memahami distribusi, korelasi antar parameter, dan pola data per `DeviceId`.
-2. **Pembersihan/perbaikan dataset** — menangani *missing values* dan potensi outlier/noise pada data.
-3. **Pemodelan** — merancang dan melatih model **Autoencoder** secara *unsupervised* untuk mempelajari pola normal data sensor tanah.
-4. **Evaluasi model** — menentukan pendekatan untuk mengukur *reconstruction error* (misalnya MSE) dan menetapkan threshold anomali.
-5. **Kuantisasi model** — mengonversi model terlatih ke **TensorFlow Lite** dan menerapkan **Full Integer INT8 Post-Training Quantization**.
-6. **Persiapan deployment** — menyiapkan model hasil kuantisasi agar siap ditanamkan pada ESP32 untuk inferensi offline.
+1. **Exploratory Data Analysis (EDA)** - memahami distribusi, korelasi antar parameter, dan pola data per `DeviceId`.
+2. **Pembersihan/perbaikan dataset** - menangani *missing values* dan potensi outlier/noise pada data.
+3. **Pemodelan** - merancang dan melatih model **Autoencoder** secara *unsupervised* untuk mempelajari pola normal data sensor tanah.
+4. **Evaluasi model** - menentukan pendekatan untuk mengukur *reconstruction error* (misalnya MSE) dan menetapkan threshold anomali.
+5. **Kuantisasi model** - mengonversi model terlatih ke **TensorFlow Lite** dan menerapkan **Full Integer INT8 Post-Training Quantization**.
+6. **Persiapan deployment** - menyiapkan model hasil kuantisasi agar siap ditanamkan pada ESP32 untuk inferensi offline.
 
 ## Pengumpulan Tugas
 
 Tugas dikumpulkan dalam **2 file utama**:
 
-1. **Link Google Colab** — pastikan sudah dibagikan dengan akses **share for all**.
-2. **Dokumen laporan (format PDF)** — menjelaskan secara mendetail dan berurutan:
+1. **Link Google Colab** - pastikan sudah dibagikan dengan akses **share for all**.
+2. **Dokumen laporan (format PDF)** - menjelaskan secara mendetail dan berurutan:
    - Proses EDA dan temuan yang didapat dari data
    - Langkah yang dilakukan untuk memperbaiki/membersihkan dataset
    - Model yang digunakan beserta alasan pemilihan model tersebut
@@ -81,7 +81,7 @@ Dokumen laporan disusun rapi dan jelas, dengan setiap langkah pengerjaan dijelas
 
 ## Catatan
 
-- Dataset `dataset.csv` tidak memiliki label — seluruh pendekatan deteksi anomali bersifat *unsupervised*.
+- Dataset `dataset.csv` tidak memiliki label dan seluruh pendekatan deteksi anomali bersifat *unsupervised*.
 - Dataset mengandung *missing values* pada beberapa kolom sensor sehingga pembersihan data merupakan tahapan wajib sebelum training.
 - Tidak ada notebook, kode, atau file model contoh yang disediakan pada repository ini — seluruh proses EDA, training, dan konversi model dirancang dan dikerjakan sendiri oleh peserta.
 
@@ -90,7 +90,7 @@ Dokumen laporan disusun rapi dan jelas, dengan setiap langkah pengerjaan dijelas
 - **Nama dataset:** `dataset.csv`
 - **Studi kasus:** Rekayasa Edge AI untuk Pemantauan Lahan
 - **Tipe data:** Data sensor lingkungan tanah (mentah/belum bersih), tanpa label
-- **Jumlah baris:** ±3000 baris
+- **Jumlah baris:** 3000 baris
 - **Jumlah parameter sensor:** 9 (N, P, K, EC, pH, Temperature, Pressure, Humidity, Light)
 - **Metode ML yang disyaratkan:** Autoencoder (unsupervised learning)
 - **Target deployment:** ESP32 (offline/lokal)
