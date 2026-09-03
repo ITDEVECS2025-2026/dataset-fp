@@ -1,4 +1,4 @@
-# Studi Kasus: Rekayasa Edge AI untuk Pemantauan Lahan
+# Studi Kasus: Edge AI untuk Pemantauan Unsur Hara Tanah Sawah
 
 Repository ini berisi dataset dan penugasan studi kasus **Edge Machine Learning** untuk deteksi anomali kondisi tanah. Peserta berperan sebagai Machine Learning Engineer yang merancang sistem pemantauan tanah berbasis sensor lingkungan, mulai dari analisis data, pelatihan model, hingga kompresi model agar dapat berjalan secara lokal (offline) pada mikrokontroler **ESP32**. Peserta merancang dan mengerjakan seluruh alur kerja EDA, pembersihan data, pemodelan, kuantisasi hingga deployment ESP32 sendiri berdasarkan dataset dan ketentuan di bawah.
 
